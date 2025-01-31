@@ -1,0 +1,10 @@
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\VS Projects\OOP2_Week01_Day01-BasicIO\bin\Debug\OOP2_Week01_Day01-BasicIO.exe.config
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\VS Projects\OOP2_Week01_Day01-BasicIO\bin\Debug\OOP2_Week01_Day01-BasicIO.exe
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\VS Projects\OOP2_Week01_Day01-BasicIO\bin\Debug\OOP2_Week01_Day01-BasicIO.pdb
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\VS Projects\OOP2_Week01_Day01-BasicIO\obj\Debug\OOP2_Week01_Day01-BasicIO.csproj.AssemblyReference.cache
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\VS Projects\OOP2_Week01_Day01-BasicIO\obj\Debug\OOP2_Week01_Day01_BasicIO.Properties.Resources.resources
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\VS Projects\OOP2_Week01_Day01-BasicIO\obj\Debug\OOP2_Week01_Day01-BasicIO.csproj.GenerateResource.cache
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\VS Projects\OOP2_Week01_Day01-BasicIO\obj\Debug\OOP2_Week01_Day01-BasicIO.csproj.CoreCompileInputs.cache
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\VS Projects\OOP2_Week01_Day01-BasicIO\obj\Debug\OOP2_Week01_Day01-BasicIO.exe
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\VS Projects\OOP2_Week01_Day01-BasicIO\obj\Debug\OOP2_Week01_Day01-BasicIO.pdb
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\VS Projects\OOP2_Week01_Day01-BasicIO\obj\Debug\OOP2_Week01_Day01_BasicIO.Form1.resources

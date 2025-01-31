@@ -1,0 +1,10 @@
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\ICE Projects\COSC2100_ICE1_RobertMacklem\bin\Debug\COSC2100_ICE1_RobertMacklem.exe.config
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\ICE Projects\COSC2100_ICE1_RobertMacklem\bin\Debug\COSC2100_ICE1_RobertMacklem.exe
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\ICE Projects\COSC2100_ICE1_RobertMacklem\bin\Debug\COSC2100_ICE1_RobertMacklem.pdb
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\ICE Projects\COSC2100_ICE1_RobertMacklem\obj\Debug\COSC2100_ICE1_RobertMacklem.csproj.AssemblyReference.cache
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\ICE Projects\COSC2100_ICE1_RobertMacklem\obj\Debug\COSC2100_ICE1_RobertMacklem.frmMain.resources
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\ICE Projects\COSC2100_ICE1_RobertMacklem\obj\Debug\COSC2100_ICE1_RobertMacklem.Properties.Resources.resources
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\ICE Projects\COSC2100_ICE1_RobertMacklem\obj\Debug\COSC2100_ICE1_RobertMacklem.csproj.GenerateResource.cache
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\ICE Projects\COSC2100_ICE1_RobertMacklem\obj\Debug\COSC2100_ICE1_RobertMacklem.csproj.CoreCompileInputs.cache
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\ICE Projects\COSC2100_ICE1_RobertMacklem\obj\Debug\COSC2100_ICE1_RobertMacklem.exe
+C:\Users\rjmac\OneDrive\Documents\DC Resources\COSC2100\ICE Projects\COSC2100_ICE1_RobertMacklem\obj\Debug\COSC2100_ICE1_RobertMacklem.pdb
