@@ -137,7 +137,7 @@ namespace COSC2100_ICE4_RobertMacklem
         protected void playerWins()
         {
             // Displays a messagebox and stores the result of the Yes/No button options the player clicks
-            var playAgain = MessageBox.Show("Congratulations!\n\nPlay Again:", "ALL MATCHES FOUND", MessageBoxButtons.YesNo);
+            var playAgain = MessageBox.Show("Congratulations! You have found all matching pairs.\n\nPlay Again:", "ALL MATCHES FOUND", MessageBoxButtons.YesNo);
 
             // If they said yes
             if (playAgain == DialogResult.Yes)
