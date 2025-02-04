@@ -16,14 +16,33 @@ namespace COSC2100_Lab2_RobertMacklem
         // grid is square and size is fixed 3x3
         const int GridDimension = 3;
 
-        // Defines the indicies that make up the two diagonal victory sets in a table 0-8
-        int[] SlopeUp = { 2, 4, 6 };
-        int[] SlopeDown = { 0, 4, 8 };
+        // Constant input for playerWhoWon on draw
+        const string Nobody = "Nodoby";
+
+        // Constant strings for player characters
+        const string X = "X";
+        const string O = "O";
+        const string Neither = "_";
 
         // VARIABLES
         // Score trackers
         int xScore = 0;
         int oScore = 0;
+
+        // Defines the sets of indicies that make up the winning match 3 cases
+        int[][] WinConditions = new int[8][] { 
+            new int[3] {0,1,2}, 
+            new int[3] {3,4,5},
+            new int[3] {6,7,8},
+            new int[3] {0,3,6},
+            new int[3] {1,4,7},
+            new int[3] {2,5,8},
+            new int[3] {0,4,8},
+            new int[3] {2,4,6},
+        };
+
+        // Tracks claimed squares
+        int squaresClaimed = 0;
 
         // Turn tracker
         bool isPlayerOTurn = false;
@@ -85,20 +104,31 @@ namespace COSC2100_Lab2_RobertMacklem
             // Cast even caller to Label, since thats the control were using this on
             Label clickedLabel = (Label) sender;
 
+            // Get the index (cell in table)
+            int square = tlpGameArea.Controls.GetChildIndex((Control)sender);
+
             // Check if it hasn't been picked
             if (clickedLabel.Text == "")
             {
-                // If so, pick it for the player whose turn it is
-                clickedLabel.Text = (isPlayerOTurn) ? "O" : "X";
+                // If so, claim it for tracking purposes
+                squaresClaimed++;
+
+                // Update GUI
+                clickedLabel.Text = (isPlayerOTurn) ? O : X;
                 clickedLabel.ForeColor = (isPlayerOTurn) ? Color.Red : Color.Blue;
 
-                // Get the index for feeding the CheckGameWon method
-                int square = tlpGameArea.Controls.GetChildIndex((Control)sender);
-
                 // Checks if the player who made the pick has won the game
-                if (CheckGameWon(square, clickedLabel.Text))
+                if (CheckGameWon(clickedLabel.Text))
                 {
-                    WinGame((isPlayerOTurn) ? tbxPlayerO.Text : tbxPlayerX.Text);
+                    // Call game over and pass in that player name as winner
+                    GameOver((isPlayerOTurn) ? tbxPlayerO.Text : tbxPlayerX.Text);
+                }
+
+                // If the player hasn't won, checks to see if the board is full
+                else if (squaresClaimed == GridDimension*GridDimension)
+                {
+                    // If so, call game over and pass in nobody as winner
+                    GameOver(Nobody);
                 }
 
                 // Otherwise, change turns
@@ -136,110 +166,57 @@ namespace COSC2100_Lab2_RobertMacklem
         /// Checks if one player has gotten 3 in a row, ending the game and declaring them
         /// winner of the round
         /// </summary>
-        private bool CheckGameWon(int square, string player)
+        private bool CheckGameWon(string player)
         {
             // Gets current table state
             TableLayoutControlCollection table = tlpGameArea.Controls;
 
-            // CHECKING COLUMN FOR A MATCH
-            //****************************
-            // Gets the col and row through modulo
-            int col = square % GridDimension;
-
-            // Checks column to see if they are match 3 and returns result
-            bool colMatch = (
-                table[col].Text == player
-                && table[col + GridDimension].Text == player
-                && table[col + GridDimension + GridDimension].Text == player
-                );
-
-            // CHECKING ROW FOR A MATCH
-            //*************************
-            // Declare row match bool
-            bool rowMatch = false;
-
-            // Declare 2 int array to track neighbor indices
-            int[] rowNeighbor = { 0, 0 };
-            switch (col)
+            foreach (int[] win in WinConditions)
             {
-                case 0:
-                    // Case if neighbors are both left (index increments)
-                    rowNeighbor = new int[] { 1, 2 };
-                    break;
-
-                case 1:
-                    // Case if neighbors are both sides (index increment and decrement)
-                    rowNeighbor = new int[] { -1, 1 };
-                    break;
-
-                case 2:
-                    // Case if neighbors are both right (index decrements)
-                    rowNeighbor = new int[] { -1, -2 };
-                    break;
-            }
-
-            // Check the two other cells in the row, using neighbor indices
-            rowMatch = (table[square + rowNeighbor[0]].Text == player && table[square + rowNeighbor[1]].Text == player);
-
-            // CHECKING THE DIAGONALS FOR A MATCH
-            // **********************************
-            // Declares vars for diagonal match checks
-            bool slopeUpMatch = false;
-            bool slopeDownMatch = false;
-
-            // Checks if an angle win is possible, which is only on even square indices
-            if (square % 2 == 0)
-            {
-                // if it is possible, do a check for the relevant diagonal set that the index is in
-                if (SlopeUp.Contains(square))
-                {
-                    // if they all match the player text, its a match
-                    slopeUpMatch = (table[SlopeUp[0]].Text == player && table[SlopeUp[1]].Text == player && table[SlopeUp[2]].Text == player);
-                }
-
-                else
-                {
-                    slopeDownMatch = (table[SlopeDown[0]].Text == player && table[SlopeDown[1]].Text == player && table[SlopeDown[2]].Text == player);
-                }
+                if (table[win[0]].Text == player && table[win[1]].Text == player && table[win[2]].Text == player) return true;
             }
 
             // Return true if ANY match cases are true
-            return colMatch || rowMatch || slopeUpMatch || slopeDownMatch ;
+            return false;
         }
 
         /// <summary>
         /// Handles processing a victory. Takes in the player whose turn it is, increments score, compares score
         /// to set the winner label, then uses a message box to ask users if they wish to keep playing.
         /// </summary>
-        private void WinGame(string playerWhoWon)
+        private void GameOver(string playerWhoWon)
         {
-            // Increment the respective score
-            if (isPlayerOTurn)
+            // If one of the players has won
+            if (playerWhoWon != Nobody)
             {
-                OScore++;
-            }
+                // Increment the respective score
+                if (isPlayerOTurn)
+                {
+                    OScore++;
+                }
 
-            else
-            {
-                XScore++;
+                else
+                {
+                    XScore++;
+                }
             }
 
             // Sets winner text & colour based on score differential
             if (OScore > XScore)
             {
-                lblWinner.Text = "O";
+                lblWinner.Text = O;
                 lblWinner.ForeColor = Color.Red;
             }
 
             else if (OScore == XScore)
             {
-                lblWinner.Text = "_";
+                lblWinner.Text = Neither;
                 lblWinner.ForeColor = Color.Black;
             }
 
             else
             {
-                lblWinner.Text = "X";
+                lblWinner.Text = X;
                 lblWinner.ForeColor = Color.Blue;
             }
 
@@ -250,7 +227,6 @@ namespace COSC2100_Lab2_RobertMacklem
             if (playAgain == DialogResult.Yes)
             {
                 Reset();
-                StartGame();
             }
 
             // If not, quit
@@ -287,11 +263,11 @@ namespace COSC2100_Lab2_RobertMacklem
 
         private void Reset()
         {
-            // Disable game area
-            tlpGameArea.Enabled = false;
-
             // Reset the turn
-            isPlayerOTurn = false;
+            IsPlayerOTurn = false;
+
+            // Reset player squares claimed tracker
+            squaresClaimed = 0;
 
             // Resets all squares to "" or invisible and resets forecolour
             foreach (Label square in tlpGameArea.Controls)

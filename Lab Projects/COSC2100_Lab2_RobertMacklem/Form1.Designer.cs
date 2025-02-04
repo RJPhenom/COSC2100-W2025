@@ -45,6 +45,7 @@
             this.tlpWinner = new System.Windows.Forms.TableLayoutPanel();
             this.lblWinner = new System.Windows.Forms.Label();
             this.gbxGameArea = new System.Windows.Forms.GroupBox();
+            this.tlpGameAreLayout = new System.Windows.Forms.TableLayoutPanel();
             this.tlpGameArea = new System.Windows.Forms.TableLayoutPanel();
             this.lblSquare8 = new System.Windows.Forms.Label();
             this.lblSquare7 = new System.Windows.Forms.Label();
@@ -55,9 +56,8 @@
             this.lblSquare2 = new System.Windows.Forms.Label();
             this.lblSquare1 = new System.Windows.Forms.Label();
             this.lblSquare0 = new System.Windows.Forms.Label();
-            this.ttpErrorToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.tlpGameAreLayout = new System.Windows.Forms.TableLayoutPanel();
             this.lblGameStatus = new System.Windows.Forms.Label();
+            this.ttpErrorToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tlpLayoutPanel.SuspendLayout();
             this.gbxPlayers.SuspendLayout();
             this.tlpPlayers.SuspendLayout();
@@ -66,8 +66,8 @@
             this.gbxWinner.SuspendLayout();
             this.tlpWinner.SuspendLayout();
             this.gbxGameArea.SuspendLayout();
-            this.tlpGameArea.SuspendLayout();
             this.tlpGameAreLayout.SuspendLayout();
+            this.tlpGameArea.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpLayoutPanel
@@ -254,6 +254,21 @@
             this.gbxGameArea.TabStop = false;
             this.gbxGameArea.Text = "Game Area";
             // 
+            // tlpGameAreLayout
+            // 
+            this.tlpGameAreLayout.ColumnCount = 1;
+            this.tlpGameAreLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpGameAreLayout.Controls.Add(this.tlpGameArea, 0, 1);
+            this.tlpGameAreLayout.Controls.Add(this.lblGameStatus, 0, 0);
+            this.tlpGameAreLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpGameAreLayout.Location = new System.Drawing.Point(3, 16);
+            this.tlpGameAreLayout.Name = "tlpGameAreLayout";
+            this.tlpGameAreLayout.RowCount = 2;
+            this.tlpGameAreLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpGameAreLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tlpGameAreLayout.Size = new System.Drawing.Size(381, 391);
+            this.tlpGameAreLayout.TabIndex = 1;
+            // 
             // tlpGameArea
             // 
             this.tlpGameArea.ColumnCount = 3;
@@ -423,26 +438,6 @@
             this.lblSquare0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSquare0.Click += new System.EventHandler(this.OnSquareClicked);
             // 
-            // ttpErrorToolTip
-            // 
-            this.ttpErrorToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
-            this.ttpErrorToolTip.ToolTipTitle = "ERROR";
-            // 
-            // tlpGameAreLayout
-            // 
-            this.tlpGameAreLayout.ColumnCount = 1;
-            this.tlpGameAreLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpGameAreLayout.Controls.Add(this.tlpGameArea, 0, 1);
-            this.tlpGameAreLayout.Controls.Add(this.lblGameStatus, 0, 0);
-            this.tlpGameAreLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpGameAreLayout.Location = new System.Drawing.Point(3, 16);
-            this.tlpGameAreLayout.Name = "tlpGameAreLayout";
-            this.tlpGameAreLayout.RowCount = 2;
-            this.tlpGameAreLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlpGameAreLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tlpGameAreLayout.Size = new System.Drawing.Size(381, 391);
-            this.tlpGameAreLayout.TabIndex = 1;
-            // 
             // lblGameStatus
             // 
             this.lblGameStatus.AutoSize = true;
@@ -451,8 +446,13 @@
             this.lblGameStatus.Name = "lblGameStatus";
             this.lblGameStatus.Size = new System.Drawing.Size(375, 39);
             this.lblGameStatus.TabIndex = 1;
-            this.lblGameStatus.Text = "Waiting to launch...";
+            this.lblGameStatus.Text = "Waiting for player names!";
             this.lblGameStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ttpErrorToolTip
+            // 
+            this.ttpErrorToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
+            this.ttpErrorToolTip.ToolTipTitle = "ERROR";
             // 
             // frmMain
             // 
@@ -476,10 +476,10 @@
             this.tlpWinner.ResumeLayout(false);
             this.tlpWinner.PerformLayout();
             this.gbxGameArea.ResumeLayout(false);
-            this.tlpGameArea.ResumeLayout(false);
-            this.tlpGameArea.PerformLayout();
             this.tlpGameAreLayout.ResumeLayout(false);
             this.tlpGameAreLayout.PerformLayout();
+            this.tlpGameArea.ResumeLayout(false);
+            this.tlpGameArea.PerformLayout();
             this.ResumeLayout(false);
 
         }
