@@ -10,9 +10,15 @@ using System.Windows.Forms;
 
 namespace COSC2100_ICE4_RobertMacklem
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        // CONSTANTS
+        readonly string[] emojis = { "😍", "😡", "🤦‍♂️", "😎", "👌", "😒", "😘", "😅"};
+
+        // VARIABLES
+        List<string> emojiList = new List<string>();
+
+        public frmMain()
         {
             InitializeComponent();
         }
