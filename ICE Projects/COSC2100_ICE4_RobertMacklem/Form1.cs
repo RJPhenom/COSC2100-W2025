@@ -13,7 +13,10 @@ namespace COSC2100_ICE4_RobertMacklem
     public partial class frmMain : Form
     {
         // CONSTANTS
-        readonly string[] emojis = { "😍", "😡", "🤦‍♂️", "😎", "👌", "😒", "😘", "😅"};
+        readonly string[] emojis = {
+        "😍", "😡", "🤦‍♂️", "😎", "👌", "😒", "😘", "😅",
+        "😍", "😡", "🤦‍♂️", "😎", "👌", "😒", "😘", "😅"
+        };
 
         // VARIABLES
         // List of emojis in random order
@@ -36,7 +39,7 @@ namespace COSC2100_ICE4_RobertMacklem
                 pairsFound = value;
 
                 // Updates GUI
-                lblPairsFound.Text = "Pairs Found: " + pairsFound.ToString() + " out of " + emojis.Length.ToString();
+                lblPairsFound.Text = "Pairs Found: " + pairsFound.ToString() + " out of " + (emojis.Length/2).ToString();
             }
         }
 
@@ -67,13 +70,30 @@ namespace COSC2100_ICE4_RobertMacklem
                 square.Text = "";
             }
 
-            // Generates the emoji list
+            // Generates a temp list of the emojis for reference at runtime
+            emojiList = emojis.ToList();
+
+            // Randomizes emoji placement
+            Random random = new Random();
+
+            // A temporary contrainer of the randomized list
+            List<string> randomizedList = new List<string>();
+
+            // Loop through each emoji
             foreach (string emoji in emojis)
             {
-                // Adds each emoji twice, guaranteeing pairs
-                emojiList.Add(emoji);
-                emojiList.Add(emoji);
+                // Pick an emoji
+                string randomEmoji = emojiList[random.Next(emojiList.Count)];
+
+                // Add it to the temp randomized list
+                randomizedList.Add(randomEmoji);
+
+                // Remove it from the reference runtime list
+                emojiList.Remove(randomEmoji);
             }
+
+            // Sets the randomized list to the runtime list
+            emojiList = randomizedList;
         }
 
         /// <summary>
