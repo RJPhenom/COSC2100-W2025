@@ -94,7 +94,7 @@ namespace COSC2100_ICE4_RobertMacklem
 
         protected void playerWins()
         {
-            MessageBox.Show("Congratulations!\nALL MATCHES FOUND");
+            MessageBox.Show("Congratulations!\nYOU WIN!");
         }
     }
 }
