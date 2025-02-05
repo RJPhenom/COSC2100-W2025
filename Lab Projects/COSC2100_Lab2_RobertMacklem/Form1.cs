@@ -134,11 +134,6 @@ namespace COSC2100_Lab2_RobertMacklem
                     IsPlayerOTurn = !isPlayerOTurn;
                 }
             }
-
-            else
-            {
-                // TODO: Error tooltip
-            }
         }
 
         /// <summary>
@@ -271,7 +266,7 @@ namespace COSC2100_Lab2_RobertMacklem
             // Reset player squares claimed tracker
             squaresClaimed = 0;
 
-            // Resets all squares to "" or invisible and resets forecolour
+            // Resets all squares to ""
             foreach (Label square in tlpGameArea.Controls)
             {
                 square.Text = "";

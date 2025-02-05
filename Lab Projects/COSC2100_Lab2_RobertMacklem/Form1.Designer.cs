@@ -299,7 +299,6 @@
             this.tlpGameArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpGameArea.Size = new System.Drawing.Size(375, 346);
             this.tlpGameArea.TabIndex = 0;
-            this.ttpToolTip.SetToolTip(this.tlpGameArea, "Click on a square to select it.");
             // 
             // lblSquare8
             // 
@@ -314,6 +313,7 @@
             this.lblSquare8.Size = new System.Drawing.Size(125, 116);
             this.lblSquare8.TabIndex = 9;
             this.lblSquare8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttpToolTip.SetToolTip(this.lblSquare8, "Click on a square to select it.");
             this.lblSquare8.Click += new System.EventHandler(this.OnSquareClicked);
             // 
             // lblSquare7
@@ -329,6 +329,7 @@
             this.lblSquare7.Size = new System.Drawing.Size(125, 116);
             this.lblSquare7.TabIndex = 8;
             this.lblSquare7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttpToolTip.SetToolTip(this.lblSquare7, "Click on a square to select it.");
             this.lblSquare7.Click += new System.EventHandler(this.OnSquareClicked);
             // 
             // lblSquare6
@@ -344,6 +345,7 @@
             this.lblSquare6.Size = new System.Drawing.Size(125, 116);
             this.lblSquare6.TabIndex = 7;
             this.lblSquare6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttpToolTip.SetToolTip(this.lblSquare6, "Click on a square to select it.");
             this.lblSquare6.Click += new System.EventHandler(this.OnSquareClicked);
             // 
             // lblSquare5
@@ -359,6 +361,7 @@
             this.lblSquare5.Size = new System.Drawing.Size(125, 115);
             this.lblSquare5.TabIndex = 6;
             this.lblSquare5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttpToolTip.SetToolTip(this.lblSquare5, "Click on a square to select it.");
             this.lblSquare5.Click += new System.EventHandler(this.OnSquareClicked);
             // 
             // lblSquare4
@@ -374,6 +377,7 @@
             this.lblSquare4.Size = new System.Drawing.Size(125, 115);
             this.lblSquare4.TabIndex = 5;
             this.lblSquare4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttpToolTip.SetToolTip(this.lblSquare4, "Click on a square to select it.");
             this.lblSquare4.Click += new System.EventHandler(this.OnSquareClicked);
             // 
             // lblSquare3
@@ -389,6 +393,7 @@
             this.lblSquare3.Size = new System.Drawing.Size(125, 115);
             this.lblSquare3.TabIndex = 4;
             this.lblSquare3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttpToolTip.SetToolTip(this.lblSquare3, "Click on a square to select it.");
             this.lblSquare3.Click += new System.EventHandler(this.OnSquareClicked);
             // 
             // lblSquare2
@@ -404,6 +409,7 @@
             this.lblSquare2.Size = new System.Drawing.Size(125, 115);
             this.lblSquare2.TabIndex = 3;
             this.lblSquare2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttpToolTip.SetToolTip(this.lblSquare2, "Click on a square to select it.");
             this.lblSquare2.Click += new System.EventHandler(this.OnSquareClicked);
             // 
             // lblSquare1
@@ -419,6 +425,7 @@
             this.lblSquare1.Size = new System.Drawing.Size(125, 115);
             this.lblSquare1.TabIndex = 2;
             this.lblSquare1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttpToolTip.SetToolTip(this.lblSquare1, "Click on a square to select it.");
             this.lblSquare1.Click += new System.EventHandler(this.OnSquareClicked);
             // 
             // lblSquare0
@@ -434,6 +441,7 @@
             this.lblSquare0.Size = new System.Drawing.Size(125, 115);
             this.lblSquare0.TabIndex = 1;
             this.lblSquare0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttpToolTip.SetToolTip(this.lblSquare0, "Click on a square to select it.");
             this.lblSquare0.Click += new System.EventHandler(this.OnSquareClicked);
             // 
             // lblGameStatus
@@ -449,9 +457,10 @@
             // 
             // ttpToolTip
             // 
+            this.ttpToolTip.AutomaticDelay = 300;
             this.ttpToolTip.AutoPopDelay = 3000;
-            this.ttpToolTip.InitialDelay = 500;
-            this.ttpToolTip.ReshowDelay = 100;
+            this.ttpToolTip.InitialDelay = 300;
+            this.ttpToolTip.ReshowDelay = 0;
             // 
             // frmMain
             // 
