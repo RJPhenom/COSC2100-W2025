@@ -90,9 +90,6 @@ namespace COSC2100_Lab2_RobertMacklem
         {
             // Default init
             InitializeComponent();
-
-            // Perform initial reset
-            Reset();
         }
 
         /// <summary>
@@ -155,11 +152,16 @@ namespace COSC2100_Lab2_RobertMacklem
                 // Startgame
                 StartGame();
             }
+        }
 
-            else
-            {
-                // TODO: error tooltip
-            }
+
+        /// <summary>
+        /// Added a click event to custom handle clicking-off the name tbx's
+        /// rather than just tab-leaving them
+        /// </summary>
+        private void OnClickedGameArea(object sender, EventArgs e)
+        {
+            if (tbxPlayerX.Enabled) OnPlayerNameChanged(sender, e);
         }
 
         /// <summary>
@@ -273,7 +275,6 @@ namespace COSC2100_Lab2_RobertMacklem
             foreach (Label square in tlpGameArea.Controls)
             {
                 square.Text = "";
-                square.ForeColor = Color.Black;
             }
         }
     }

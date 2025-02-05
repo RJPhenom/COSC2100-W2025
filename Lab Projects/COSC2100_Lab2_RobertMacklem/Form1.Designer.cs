@@ -57,7 +57,7 @@
             this.lblSquare1 = new System.Windows.Forms.Label();
             this.lblSquare0 = new System.Windows.Forms.Label();
             this.lblGameStatus = new System.Windows.Forms.Label();
-            this.ttpErrorToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.ttpToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tlpLayoutPanel.SuspendLayout();
             this.gbxPlayers.SuspendLayout();
             this.tlpPlayers.SuspendLayout();
@@ -148,7 +148,8 @@
             this.tbxPlayerX.Name = "tbxPlayerX";
             this.tbxPlayerX.Size = new System.Drawing.Size(173, 20);
             this.tbxPlayerX.TabIndex = 2;
-            this.tbxPlayerX.TextChanged += new System.EventHandler(this.OnPlayerNameChanged);
+            this.ttpToolTip.SetToolTip(this.tbxPlayerX, "Please input a name for player X. Names cannot be blank.");
+            this.tbxPlayerX.Leave += new System.EventHandler(this.OnPlayerNameChanged);
             // 
             // tbxPlayerO
             // 
@@ -158,7 +159,8 @@
             this.tbxPlayerO.Name = "tbxPlayerO";
             this.tbxPlayerO.Size = new System.Drawing.Size(173, 20);
             this.tbxPlayerO.TabIndex = 3;
-            this.tbxPlayerO.TextChanged += new System.EventHandler(this.OnPlayerNameChanged);
+            this.ttpToolTip.SetToolTip(this.tbxPlayerO, "Please input a name for player O. Names cannot be blank.");
+            this.tbxPlayerO.Leave += new System.EventHandler(this.OnPlayerNameChanged);
             // 
             // gbxScore
             // 
@@ -194,6 +196,7 @@
             this.tbxScoreX.ReadOnly = true;
             this.tbxScoreX.Size = new System.Drawing.Size(60, 20);
             this.tbxScoreX.TabIndex = 0;
+            this.tbxScoreX.TabStop = false;
             // 
             // tbxScoreO
             // 
@@ -203,6 +206,7 @@
             this.tbxScoreO.ReadOnly = true;
             this.tbxScoreO.Size = new System.Drawing.Size(60, 20);
             this.tbxScoreO.TabIndex = 1;
+            this.tbxScoreO.TabStop = false;
             // 
             // gbxWinner
             // 
@@ -268,6 +272,7 @@
             this.tlpGameAreLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tlpGameAreLayout.Size = new System.Drawing.Size(381, 391);
             this.tlpGameAreLayout.TabIndex = 1;
+            this.tlpGameAreLayout.Click += new System.EventHandler(this.OnClickedGameArea);
             // 
             // tlpGameArea
             // 
@@ -284,6 +289,7 @@
             this.tlpGameArea.Controls.Add(this.lblSquare2, 2, 0);
             this.tlpGameArea.Controls.Add(this.lblSquare1, 1, 0);
             this.tlpGameArea.Controls.Add(this.lblSquare0, 0, 0);
+            this.tlpGameArea.Enabled = false;
             this.tlpGameArea.Location = new System.Drawing.Point(3, 42);
             this.tlpGameArea.Name = "tlpGameArea";
             this.tlpGameArea.RowCount = 3;
@@ -293,6 +299,7 @@
             this.tlpGameArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpGameArea.Size = new System.Drawing.Size(375, 346);
             this.tlpGameArea.TabIndex = 0;
+            this.ttpToolTip.SetToolTip(this.tlpGameArea, "Click on a square to select it.");
             // 
             // lblSquare8
             // 
@@ -306,7 +313,6 @@
             this.lblSquare8.Name = "lblSquare8";
             this.lblSquare8.Size = new System.Drawing.Size(125, 116);
             this.lblSquare8.TabIndex = 9;
-            this.lblSquare8.Text = "X/O";
             this.lblSquare8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSquare8.Click += new System.EventHandler(this.OnSquareClicked);
             // 
@@ -322,7 +328,6 @@
             this.lblSquare7.Name = "lblSquare7";
             this.lblSquare7.Size = new System.Drawing.Size(125, 116);
             this.lblSquare7.TabIndex = 8;
-            this.lblSquare7.Text = "X/O";
             this.lblSquare7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSquare7.Click += new System.EventHandler(this.OnSquareClicked);
             // 
@@ -338,7 +343,6 @@
             this.lblSquare6.Name = "lblSquare6";
             this.lblSquare6.Size = new System.Drawing.Size(125, 116);
             this.lblSquare6.TabIndex = 7;
-            this.lblSquare6.Text = "X/O";
             this.lblSquare6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSquare6.Click += new System.EventHandler(this.OnSquareClicked);
             // 
@@ -354,7 +358,6 @@
             this.lblSquare5.Name = "lblSquare5";
             this.lblSquare5.Size = new System.Drawing.Size(125, 115);
             this.lblSquare5.TabIndex = 6;
-            this.lblSquare5.Text = "X/O";
             this.lblSquare5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSquare5.Click += new System.EventHandler(this.OnSquareClicked);
             // 
@@ -370,7 +373,6 @@
             this.lblSquare4.Name = "lblSquare4";
             this.lblSquare4.Size = new System.Drawing.Size(125, 115);
             this.lblSquare4.TabIndex = 5;
-            this.lblSquare4.Text = "X/O";
             this.lblSquare4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSquare4.Click += new System.EventHandler(this.OnSquareClicked);
             // 
@@ -386,7 +388,6 @@
             this.lblSquare3.Name = "lblSquare3";
             this.lblSquare3.Size = new System.Drawing.Size(125, 115);
             this.lblSquare3.TabIndex = 4;
-            this.lblSquare3.Text = "X/O";
             this.lblSquare3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSquare3.Click += new System.EventHandler(this.OnSquareClicked);
             // 
@@ -402,7 +403,6 @@
             this.lblSquare2.Name = "lblSquare2";
             this.lblSquare2.Size = new System.Drawing.Size(125, 115);
             this.lblSquare2.TabIndex = 3;
-            this.lblSquare2.Text = "X/O";
             this.lblSquare2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSquare2.Click += new System.EventHandler(this.OnSquareClicked);
             // 
@@ -418,7 +418,6 @@
             this.lblSquare1.Name = "lblSquare1";
             this.lblSquare1.Size = new System.Drawing.Size(125, 115);
             this.lblSquare1.TabIndex = 2;
-            this.lblSquare1.Text = "X/O";
             this.lblSquare1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSquare1.Click += new System.EventHandler(this.OnSquareClicked);
             // 
@@ -434,7 +433,6 @@
             this.lblSquare0.Name = "lblSquare0";
             this.lblSquare0.Size = new System.Drawing.Size(125, 115);
             this.lblSquare0.TabIndex = 1;
-            this.lblSquare0.Text = "X/O";
             this.lblSquare0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSquare0.Click += new System.EventHandler(this.OnSquareClicked);
             // 
@@ -449,10 +447,11 @@
             this.lblGameStatus.Text = "Waiting for player names!";
             this.lblGameStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ttpErrorToolTip
+            // ttpToolTip
             // 
-            this.ttpErrorToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
-            this.ttpErrorToolTip.ToolTipTitle = "ERROR";
+            this.ttpToolTip.AutoPopDelay = 3000;
+            this.ttpToolTip.InitialDelay = 500;
+            this.ttpToolTip.ReshowDelay = 100;
             // 
             // frmMain
             // 
@@ -511,7 +510,7 @@
         private System.Windows.Forms.Label lblSquare1;
         private System.Windows.Forms.TableLayoutPanel tlpWinner;
         private System.Windows.Forms.Label lblWinner;
-        private System.Windows.Forms.ToolTip ttpErrorToolTip;
+        private System.Windows.Forms.ToolTip ttpToolTip;
         private System.Windows.Forms.TableLayoutPanel tlpGameAreLayout;
         private System.Windows.Forms.Label lblGameStatus;
     }
