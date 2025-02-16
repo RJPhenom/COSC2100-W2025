@@ -1,21 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\rjmac\\OneDrive\\Documents\\DC Resources\\COSC2100\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\",
+  "WorkspaceRootPath": "C:\\Users\\rjmac\\OneDrive\\Documents\\Durham College\\COSC2100-W2025\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03890132-3C8A-4F12-8D3A-E362BCEFDFF1}|COSC2100_Lab1_RobertMacklem.csproj|c:\\users\\rjmac\\onedrive\\documents\\dc resources\\cosc2100\\lab projects\\cosc2100_lab1_robertmacklem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{03890132-3C8A-4F12-8D3A-E362BCEFDFF1}|COSC2100_Lab1_RobertMacklem.csproj|c:\\users\\rjmac\\onedrive\\documents\\durham college\\cosc2100-w2025\\lab projects\\cosc2100_lab1_robertmacklem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{03890132-3C8A-4F12-8D3A-E362BCEFDFF1}|COSC2100_Lab1_RobertMacklem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03890132-3C8A-4F12-8D3A-E362BCEFDFF1}|COSC2100_Lab1_RobertMacklem.csproj|c:\\users\\rjmac\\onedrive\\documents\\dc resources\\cosc2100\\lab projects\\cosc2100_lab1_robertmacklem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03890132-3C8A-4F12-8D3A-E362BCEFDFF1}|COSC2100_Lab1_RobertMacklem.csproj|C:\\Users\\rjmac\\OneDrive\\Documents\\Durham College\\COSC2100-W2025\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03890132-3C8A-4F12-8D3A-E362BCEFDFF1}|COSC2100_Lab1_RobertMacklem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|COSC2100_Lab1_RobertMacklem||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03890132-3C8A-4F12-8D3A-E362BCEFDFF1}|COSC2100_Lab1_RobertMacklem.csproj|c:\\users\\rjmac\\onedrive\\documents\\dc resources\\cosc2100\\lab projects\\cosc2100_lab1_robertmacklem\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{03890132-3C8A-4F12-8D3A-E362BCEFDFF1}|COSC2100_Lab1_RobertMacklem.csproj|solutionrelative:properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,41 +21,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "COSC2100_Lab1_RobertMacklem",
-              "DocumentMoniker": "C:\\Users\\rjmac\\OneDrive\\Documents\\DC Resources\\COSC2100\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\COSC2100_Lab1_RobertMacklem.csproj",
+              "DocumentMoniker": "C:\\Users\\rjmac\\OneDrive\\Documents\\Durham College\\COSC2100-W2025\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\COSC2100_Lab1_RobertMacklem.csproj",
               "RelativeDocumentMoniker": "COSC2100_Lab1_RobertMacklem.csproj",
-              "ToolTip": "C:\\Users\\rjmac\\OneDrive\\Documents\\DC Resources\\COSC2100\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\COSC2100_Lab1_RobertMacklem.csproj",
+              "ToolTip": "C:\\Users\\rjmac\\OneDrive\\Documents\\Durham College\\COSC2100-W2025\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\COSC2100_Lab1_RobertMacklem.csproj",
               "RelativeToolTip": "COSC2100_Lab1_RobertMacklem.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-23T06:31:45.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T06:31:45.204Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\rjmac\\OneDrive\\Documents\\DC Resources\\COSC2100\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\rjmac\\OneDrive\\Documents\\Durham College\\COSC2100-W2025\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\rjmac\\OneDrive\\Documents\\DC Resources\\COSC2100\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAowDcAAAA5AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\rjmac\\OneDrive\\Documents\\Durham College\\COSC2100-W2025\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\Form1.cs*",
+              "RelativeToolTip": "Form1.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T00:20:37.007Z",
               "EditorCaption": ""
@@ -68,9 +51,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\rjmac\\OneDrive\\Documents\\DC Resources\\COSC2100\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\rjmac\\OneDrive\\Documents\\Durham College\\COSC2100-W2025\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\rjmac\\OneDrive\\Documents\\DC Resources\\COSC2100\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\rjmac\\OneDrive\\Documents\\Durham College\\COSC2100-W2025\\Lab Projects\\COSC2100_Lab1_RobertMacklem\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-21T03:51:29.439Z",
